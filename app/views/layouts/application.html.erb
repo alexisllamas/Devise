@@ -20,8 +20,12 @@
 	  </div>
 	</div>
 <% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+	<div class="navbar navbar-default">
+	  <p class="navbar-text pull-left">
+	  		<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+	  		<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+	  </p>
+	</div>
 <% end %>
 
 <% if notice %>
@@ -29,7 +33,7 @@
 <% end %>
 
 <% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
+  <p class="alert alert-warning"><%= alert %></p>
 <% end %>
 
 <%= yield %>
